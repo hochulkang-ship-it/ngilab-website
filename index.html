@@ -1,189 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>NGI Lab – Ajou University</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <title>NGI Lab — Neuronal Genomic Instability</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
   <!-- NAV -->
-  <nav id="navbar">
-    <div class="nav-inner">
-      <a href="#home" class="nav-logo">NGI<span>Lab</span></a>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
+  <nav id="nav">
+    <div class="nav-wrap">
+      <a href="#" class="logo">NGI<em>lab</em></a>
+      <ul>
         <li><a href="#research">Research</a></li>
         <li><a href="#publications">Publications</a></li>
-        <li><a href="#members">Members</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#members">People</a></li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
       </ul>
-      <button class="hamburger" id="hamburger">&#9776;</button>
     </div>
   </nav>
 
   <!-- HERO -->
-  <section id="home" class="hero">
-    <div class="hero-content">
-      <p class="hero-tag">Ajou University School of Medicine</p>
-      <h1>Neuronal Genomic<br>Instability Lab</h1>
-      <p class="hero-sub">Decoding how DNA damage in neurons drives neurodegeneration — toward new therapeutic frontiers.</p>
-      <div class="hero-btns">
-        <a href="#research" class="btn-primary">Our Research</a>
-        <a href="#publications" class="btn-outline">Publications</a>
+  <header id="hero">
+    <div class="hero-bg">
+      <div class="grid-overlay"></div>
+      <div class="blob b1"></div>
+      <div class="blob b2"></div>
+    </div>
+    <div class="hero-inner">
+      <div class="hero-badge">Ajou University · Dept. of Physiology</div>
+      <h1>New Frontiers in<br><span>Neuronal Genomic</span><br>Instability</h1>
+      <p>We decode how DNA damage and repair mechanisms in neurons drive neurodegeneration — unlocking next-generation therapeutics.</p>
+      <div class="hero-actions">
+        <a href="#research" class="btn">Explore Research</a>
+        <a href="#publications" class="btn-ghost">Publications →</a>
       </div>
     </div>
-    <div class="hero-visual">
-      <div class="dna-ring"></div>
+    <div class="hero-scroll">scroll</div>
+  </header>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="stats-wrap">
+      <div class="stat"><span>NGI</span><p>Core Focus</p></div>
+      <div class="stat"><span>PARP1</span><p>Key Target</p></div>
+      <div class="stat"><span>2+</span><p>Biotech CEOs</p></div>
+      <div class="stat"><span>Ajou</span><p>University</p></div>
     </div>
   </section>
 
-  <!-- ABOUT -->
-  <section id="about" class="section about">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-photo">
-          <div class="photo-placeholder">
-            <span>HCK</span>
-          </div>
+  <!-- PI -->
+  <section id="about" class="pi-section">
+    <div class="pi-wrap">
+      <div class="pi-left">
+        <div class="pi-img">
+          <div class="pi-initials">HCK</div>
+          <div class="pi-ring"></div>
         </div>
-        <div class="about-text">
-          <span class="section-tag">Principal Investigator</span>
-          <h2>Ho Chul Kang, Ph.D.</h2>
-          <p class="title-list">
-            Professor, Department of Physiology<br>
-            Ajou University School of Medicine<br>
-            Director, Genomic Instability Research Center<br>
-            CEO, APROTBIO &amp; NeuroTAC
-          </p>
-          <p>
-            Our lab focuses on <strong>Neuronal Genomic Instability (NGI)</strong> — understanding how DNA damage and repair mechanisms in post-mitotic neurons contribute to neurological disorders, and how these insights can open new avenues for therapy.
-          </p>
-          <a href="http://biomed.ajou.ac.kr/prof/prof02_01/2/#Pprofile" class="btn-primary" target="_blank">Full Profile</a>
-        </div>
+      </div>
+      <div class="pi-right">
+        <p class="label">Principal Investigator</p>
+        <h2>Ho Chul Kang<br><em>Ph.D.</em></h2>
+        <ul class="pi-roles">
+          <li>Professor · Dept. of Physiology, Ajou University SOM</li>
+          <li>Director · Genomic Instability Research Center</li>
+          <li>CEO · APROTBIO &amp; NeuroTAC</li>
+        </ul>
+        <p class="pi-bio">Our lab is at the forefront of understanding <strong>Neuronal Genomic Instability (NGI)</strong> — investigating how DNA damage in post-mitotic neurons leads to neurological disorders, and translating these insights into therapeutic strategies.</p>
+        <a href="http://biomed.ajou.ac.kr/prof/prof02_01/2/#Pprofile" target="_blank" class="btn">Full Profile</a>
       </div>
     </div>
   </section>
 
   <!-- RESEARCH -->
-  <section id="research" class="section research">
-    <div class="container">
-      <span class="section-tag center">What We Do</span>
-      <h2 class="section-title center">Research Focus</h2>
-      <p class="section-sub center">We investigate the molecular mechanisms of genomic instability in neurons and its link to neurodegenerative diseases.</p>
-      <div class="cards-grid">
-        <div class="card">
-          <div class="card-icon">🔬</div>
-          <h3>PARP1 &amp; PARP Inhibitors</h3>
-          <p>The PARP1-TRIM44-MRN loop governs the cellular response to PARP inhibitors — a key axis in DNA damage signaling and therapeutic targeting.</p>
+  <section id="research" class="research-section">
+    <div class="section-wrap">
+      <div class="section-head">
+        <p class="label">What We Study</p>
+        <h2>Research Focus</h2>
+      </div>
+      <div class="research-grid">
+        <div class="r-card featured">
+          <div class="r-num">01</div>
+          <h3>PARP1–TRIM44–MRN Axis</h3>
+          <p>The PARP1-TRIM44-MRN loop dictates the cellular response to PARP inhibitors — a key pathway in DNA damage signaling and precision oncology.</p>
+          <div class="r-tag">DNA Damage Response</div>
         </div>
-        <div class="card">
-          <div class="card-icon">💧</div>
-          <h3>Liquid-Liquid Phase Separation</h3>
-          <p>USP39 promotes NHEJ repair by poly(ADP-ribose)-induced liquid demixing, revealing how phase separation controls DNA repair fidelity.</p>
+        <div class="r-card">
+          <div class="r-num">02</div>
+          <h3>Liquid–Liquid Phase Separation</h3>
+          <p>USP39 drives NHEJ DNA repair via poly(ADP-ribose)-induced liquid demixing, revealing phase separation as a regulator of genome integrity.</p>
+          <div class="r-tag">Phase Separation</div>
         </div>
-        <div class="card">
-          <div class="card-icon">🧬</div>
+        <div class="r-card">
+          <div class="r-num">03</div>
           <h3>Ubiquitin Modifiers &amp; NGI</h3>
-          <p>Ubiquitin and ubiquitin-like modifiers play critical roles in regulating neuronal genomic instability, linking proteostasis to genome integrity.</p>
+          <p>Ubiquitin and ubiquitin-like modifiers regulate neuronal genomic instability, connecting proteostasis pathways to neuronal DNA repair.</p>
+          <div class="r-tag">Ubiquitin Biology</div>
         </div>
-        <div class="card">
-          <div class="card-icon">🧠</div>
+        <div class="r-card">
+          <div class="r-num">04</div>
           <h3>Neurodegeneration</h3>
-          <p>We explore how unresolved DNA damage in neurons initiates and accelerates neurodegenerative diseases, aiming to identify early biomarkers and drug targets.</p>
+          <p>Unresolved genomic instability in neurons initiates and accelerates neurodegeneration. We identify early biomarkers and druggable targets.</p>
+          <div class="r-tag">Therapeutic Translation</div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- PUBLICATIONS -->
-  <section id="publications" class="section pubs">
-    <div class="container">
-      <span class="section-tag center">Selected Works</span>
-      <h2 class="section-title center">Publications</h2>
+  <section id="publications" class="pub-section">
+    <div class="section-wrap">
+      <div class="section-head">
+        <p class="label">Selected Works</p>
+        <h2>Publications</h2>
+      </div>
       <div class="pub-list">
-        <div class="pub-item">
-          <span class="pub-year">2024</span>
-          <div class="pub-info">
-            <p class="pub-title">PARP1-TRIM44-MRN loop dictates the response to PARP inhibitors</p>
-            <p class="pub-meta">Ho Chul Kang et al. — <em>Journal TBD</em></p>
+        <div class="pub-row">
+          <div class="pub-year-tag">2024</div>
+          <div class="pub-body">
+            <h4>PARP1-TRIM44-MRN loop dictates the response to PARP inhibitors</h4>
+            <p>Ho Chul Kang et al.</p>
           </div>
+          <div class="pub-arrow">↗</div>
         </div>
-        <div class="pub-item">
-          <span class="pub-year">2024</span>
-          <div class="pub-info">
-            <p class="pub-title">USP39 promotes NHEJ repair by poly(ADP-ribose)-induced liquid demixing</p>
-            <p class="pub-meta">Ho Chul Kang et al. — <em>Journal TBD</em></p>
+        <div class="pub-row">
+          <div class="pub-year-tag">2024</div>
+          <div class="pub-body">
+            <h4>USP39 promotes NHEJ repair by poly(ADP-ribose)-induced liquid demixing</h4>
+            <p>Ho Chul Kang et al.</p>
           </div>
+          <div class="pub-arrow">↗</div>
         </div>
       </div>
-      <p class="pub-note center">Full publication list coming soon. For complete list, visit <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Ho+Chul+Kang+Ajou" target="_blank">PubMed</a>.</p>
+      <div class="pub-footer">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Ho+Chul+Kang+Ajou" target="_blank" class="btn-ghost">View All on PubMed →</a>
+      </div>
     </div>
   </section>
 
   <!-- MEMBERS -->
-  <section id="members" class="section members">
-    <div class="container">
-      <span class="section-tag center">The Team</span>
-      <h2 class="section-title center">Lab Members</h2>
-      <p class="section-sub center">We are always looking for motivated researchers to join our team.</p>
+  <section id="members" class="members-section">
+    <div class="section-wrap">
+      <div class="section-head">
+        <p class="label">The Team</p>
+        <h2>People</h2>
+      </div>
       <div class="members-grid">
-        <div class="member-card pi">
-          <div class="member-avatar">HCK</div>
+        <div class="m-card pi-card">
+          <div class="m-avatar">HCK</div>
           <h4>Ho Chul Kang</h4>
           <p>Principal Investigator</p>
         </div>
-        <div class="member-card open">
-          <div class="member-avatar">+</div>
-          <h4>Postdoc / Graduate</h4>
-          <p>Position Open</p>
+        <div class="m-card open-card">
+          <div class="m-avatar plus">+</div>
+          <h4>Join the Lab</h4>
+          <p>Postdoc / PhD positions open</p>
         </div>
-        <div class="member-card open">
-          <div class="member-avatar">+</div>
-          <h4>Graduate Student</h4>
-          <p>Position Open</p>
+        <div class="m-card open-card">
+          <div class="m-avatar plus">+</div>
+          <h4>Join the Lab</h4>
+          <p>Graduate student positions open</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="section contact">
-    <div class="container">
-      <span class="section-tag center">Get In Touch</span>
-      <h2 class="section-title center">Contact Us</h2>
-      <div class="contact-grid">
-        <div class="contact-item">
-          <span class="contact-icon">📍</span>
-          <div>
-            <strong>Address</strong>
-            <p>Department of Physiology,<br>Ajou University School of Medicine,<br>Suwon, South Korea</p>
-          </div>
+  <section id="contact" class="contact-section">
+    <div class="section-wrap">
+      <div class="contact-box">
+        <div class="contact-left">
+          <p class="label">Get In Touch</p>
+          <h2>Contact Us</h2>
+          <p>Interested in collaboration or joining the lab? We'd love to hear from you.</p>
         </div>
-        <div class="contact-item">
-          <span class="contact-icon">🌐</span>
-          <div>
-            <strong>Website</strong>
-            <p><a href="https://www.ngilab.co.kr">www.ngilab.co.kr</a></p>
+        <div class="contact-right">
+          <div class="contact-line">
+            <span>📍</span>
+            <div>
+              <strong>Location</strong>
+              <p>Dept. of Physiology, Ajou University<br>School of Medicine, Suwon, Korea</p>
+            </div>
           </div>
-        </div>
-        <div class="contact-item">
-          <span class="contact-icon">🏢</span>
-          <div>
-            <strong>Affiliated Companies</strong>
-            <p>APROTBIO · NeuroTAC</p>
+          <div class="contact-line">
+            <span>🌐</span>
+            <div>
+              <strong>Web</strong>
+              <p><a href="https://www.ngilab.co.kr">www.ngilab.co.kr</a></p>
+            </div>
+          </div>
+          <div class="contact-line">
+            <span>🏢</span>
+            <div>
+              <strong>Affiliated</strong>
+              <p>APROTBIO · NeuroTAC</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
-    <div class="container">
-      <p>© 2026 NGI Lab · Ajou University School of Medicine · All rights reserved.</p>
+    <div class="footer-wrap">
+      <span class="logo">NGI<em>lab</em></span>
+      <p>© 2026 NGI Lab · Ajou University School of Medicine</p>
     </div>
   </footer>
 
