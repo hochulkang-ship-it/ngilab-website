@@ -1,23 +1,40 @@
-// Hamburger menu
-const hamburger = document.getElementById('hamburger');
-const navLinks = document.querySelector('.nav-links');
-hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+// NGI Lab — main.js
 
-// Navbar scroll effect
-window.addEventListener('scroll', () => {
-  document.getElementById('navbar').style.background =
-    window.scrollY > 40 ? 'rgba(10,22,40,0.98)' : 'rgba(10,22,40,0.92)';
-});
+// Mobile nav toggle
+document.addEventListener('DOMContentLoaded', function () {
+  const toggle = document.querySelector('.nav-toggle');
+  const links = document.querySelector('.nav-links');
 
-// Smooth active link highlight
-const sections = document.querySelectorAll('section[id]');
-const links = document.querySelectorAll('.nav-links a');
-window.addEventListener('scroll', () => {
-  let current = '';
-  sections.forEach(s => {
-    if (window.scrollY >= s.offsetTop - 80) current = s.id;
+  if (toggle && links) {
+    toggle.addEventListener('click', function () {
+      links.classList.toggle('open');
+    });
+    // Close on link click
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => links.classList.remove('open'));
+    });
+  }
+
+  // Active nav link
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    const href = a.getAttribute('href');
+    if (href === currentPage ||
+        (currentPage === '' && href === 'index.html') ||
+        (currentPage === '/' && href === 'index.html')) {
+      a.classList.add('active');
+    }
   });
-  links.forEach(a => {
-    a.style.color = a.getAttribute('href') === '#' + current ? '#06b6d4' : '';
-  });
+
+  // Scroll animation (fade-in-up)
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.animate').forEach(el => observer.observe(el));
 });
